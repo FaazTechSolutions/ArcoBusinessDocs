@@ -1,0 +1,684 @@
+---
+sidebar_position: 6
+---
+
+# Labour Contract Management Business Guide
+
+---
+
+# 1. Introduction
+
+This system is used to manage a labour supply business.
+
+The company provides house workers or labour workers to customers for a fixed number of days or months through contracts.
+
+The complete business includes:
+- Customer registration
+- Labour package setup
+- Labour booking
+- Employee assignment
+- Delivery to customer
+- Employee return process
+- Contract extension
+- Cancellation and refund
+- Finance and payment tracking
+
+---
+
+# 2. Simple Business Flow Overview
+
+The overall business works like this:
+
+1. Company creates labour packages
+2. Customer registers in the system
+3. Customer selects package and contract period
+4. Customer makes payment
+5. Contract is created
+6. Employee is assigned
+7. Employee is delivered to customer
+8. Contract days are consumed
+9. Employee may return / exchange / terminate
+10. Finance settlement is completed
+
+---
+
+# 3. Main Business Modules
+
+| Module | Purpose |
+|---|---|
+| Package | Define labour service plans |
+| Customer | Store customer details |
+| Opportunity | Pre-booking request |
+| Contract | Main labour agreement |
+| Labour Movement | Delivery and return operations |
+| Finance | Payments, invoices, refunds |
+| Promotion | Discounts and offers |
+| VIP | Premium customer benefits |
+| Organization | Branches and lodgings |
+| Security | User and role access |
+
+---
+
+# 4. Understanding the Core Business
+
+This company supplies house workers to customers.
+
+Example:
+- Customer wants a housemaid for 90 days
+- Customer selects a package
+- Customer pays advance amount
+- Company assigns an employee
+- Employee works at customer location
+- Contract days are reduced daily
+
+If employee returns:
+- Customer can request replacement
+- Or terminate the contract
+- Or extend the contract
+
+This is the complete business cycle.
+
+---
+
+# 5. Package Module
+
+## What is a Package?
+
+Package means:
+- Labour type
+- Pricing
+- Contract duration
+- Payment structure
+
+Example:
+
+| Package | Details |
+|---|---|
+| Indonesian Maid - 90 Days | Female worker for 90 days |
+| Driver Package | Male driver contract |
+| Monthly Low Cost | Monthly installment package |
+
+---
+
+## Package Types
+
+### 1. Monthly Low-Cost Package
+
+Customer pays:
+- Advance amount
+- Monthly installment
+
+Used for:
+- Long-term labour contracts
+
+---
+
+### 2. Per-Day Package
+
+Pricing depends on:
+- Number of days
+- Worker category
+- Nationality
+
+Example:
+
+| Days | Price Per Day |
+|---|---|
+| 1–30 | 50 |
+| 31–60 | 45 |
+| 61–90 | 40 |
+
+---
+
+# 6. Customer Module
+
+## Customer Registration
+
+Customer can register from:
+- Mobile App
+- Branch Office
+
+Customer details include:
+- Name
+- Mobile Number
+- ID Number
+- Nationality
+- Address
+- Family Information
+- Bank Details
+
+---
+
+## Customer Delegation
+
+Sometimes another person manages the contract.
+
+Example:
+- Husband creates contract
+- Wife handles worker communication
+
+That person is stored as:
+- Delegation Contact
+
+---
+
+# 7. Opportunity Module
+
+Opportunity means:
+- Customer interest before actual contract creation
+
+Simple understanding:
+- Temporary booking request
+
+---
+
+## Opportunity Flow
+
+1. Customer selects package
+2. Customer selects days
+3. System calculates amount
+4. Customer reserves employee (optional)
+5. Customer pays amount
+6. Contract gets created automatically
+
+---
+
+## Important Rule
+
+If payment is not completed within 20 minutes:
+- Opportunity automatically cancels
+
+---
+
+# 8. Contract Module
+
+Contract is the official agreement between:
+- Company
+- Customer
+
+The contract controls:
+- Package
+- Duration
+- Employee
+- Payments
+- Delivery
+- Extensions
+- Refunds
+
+---
+
+# 9. Contract Status Understanding
+
+This is the most important business logic.
+
+---
+
+## 1. New
+
+Contract created.
+Payment pending.
+
+---
+
+## 2. Document Verification
+
+Customer completed payment.
+Documents/signature verification pending.
+
+---
+
+## 3. Waiting for Selection
+
+Customer must select employee.
+
+---
+
+## 4. Waiting for Delivery
+
+Employee selected.
+Delivery process pending.
+
+---
+
+## 5. Valid
+
+Employee is working with customer.
+Contract is active.
+
+---
+
+## 6. Waiting for Exchange
+
+Employee returned.
+Customer can choose replacement employee.
+
+---
+
+## 7. Near to Expire
+
+Remaining contract days less than 15.
+
+---
+
+## 8. Expired
+
+Contract days completed.
+
+---
+
+## 9. Ended
+
+Contract closed normally.
+
+---
+
+## 10. Terminated
+
+Customer closed contract before completion.
+
+---
+
+## 11. Cancelled
+
+Contract cancelled before employee delivery.
+
+---
+
+# 10. Employee Assignment Process
+
+## Simple Workflow
+
+1. Contract enters Waiting for Selection
+2. User selects employee from lodging
+3. Employee status changes to Booked
+4. Contract moves to Waiting for Delivery
+5. Delivery process starts
+
+---
+
+## Important Rule
+
+Employee can be unassigned before delivery.
+
+If unassigned:
+- Before 24 hours → no charge
+- After 24 hours → charge applicable
+
+---
+
+# 11. Labour Delivery Process
+
+## Delivery Methods
+
+| Method | Meaning |
+|---|---|
+| Pick from Lodge | Customer collects employee |
+| Pick from Branch | Customer collects from branch |
+| Delivery to Home | Company sends employee home |
+
+---
+
+## Delivery Flow
+
+1. Payment collection
+2. Employee checkout from lodging
+3. Travel arrangement
+4. Customer confirmation
+5. Employee delivered
+6. Contract becomes Valid
+
+---
+
+# 12. Employee Return Process
+
+## Why Employee Returns?
+
+Possible reasons:
+- Replacement request
+- Vacation
+- Escape
+- Termination
+- End of contract
+
+---
+
+## Return Methods
+
+| Method | Description |
+|---|---|
+| Return to Lodge | Employee comes directly |
+| Pickup from Home | Company arranges pickup |
+
+---
+
+# 13. Replacement Process
+
+## When it happens?
+
+Customer is unhappy with employee.
+
+Company provides another employee.
+
+---
+
+## Important Rule
+
+System allows limited free replacements.
+
+After limit exceeds:
+- Replacement fee applies
+
+---
+
+# 14. Extend Process
+
+## What is Extend?
+
+Customer wants more contract days.
+
+Example:
+- Existing contract = 90 days
+- Customer extends 30 more days
+
+System:
+- Creates payment request
+- Adds new contract days
+
+---
+
+# 15. Cancel vs Terminate
+
+## Cancel
+
+Meaning:
+- Employee not yet delivered
+- Customer cancels contract
+
+Penalty:
+- Cancellation fee applies
+
+---
+
+## Terminate
+
+Meaning:
+- Employee already worked
+- Customer stops contract early
+
+Penalty:
+- Termination fee applies
+
+---
+
+# 16. Escape Process
+
+Employee leaves customer location without approval.
+
+System actions:
+- Escape request created
+- Employee removed from contract
+- Contract moves to Waiting for Exchange
+
+---
+
+# 17. Finance Module Simplified
+
+Finance module manages:
+- Payments
+- Invoices
+- Refunds
+- Wallet
+- Advance amounts
+- Penalties
+
+---
+
+# 18. Advance Payment
+
+Customer pays advance amount before contract activation.
+
+Advance payment created during:
+- Contract creation
+- Contract extension
+
+---
+
+# 19. Invoice Types
+
+| Invoice Type | Purpose |
+|---|---|
+| Advance Invoice | Initial payment |
+| Monthly Invoice | Monthly charges |
+| Consumption Invoice | Used amount settlement |
+| One-Time Invoice | Penalties / fees |
+
+---
+
+# 20. Wallet System
+
+## What is Wallet?
+
+Customer balance stored inside system.
+
+Wallet can be used for:
+- New contracts
+- Extensions
+- Future payments
+
+Wallet contains:
+- Refundable amount
+- Non-refundable amount
+
+---
+
+# 21. Refund Process
+
+Refund happens during:
+- Cancellation
+- Termination
+- Wallet withdrawal
+
+Approval stages:
+1. Accountant Approval
+2. Finance Manager Approval
+3. Refund Processing
+4. Completion
+
+---
+
+# 22. Promotion System
+
+Discount offers for customers.
+
+Example:
+- Ramadan offer
+- Referral code
+- Marketing campaign
+
+---
+
+## Promotion Types
+
+| Type | Purpose |
+|---|---|
+| Affiliate | Referral rewards |
+| Marketing | General campaigns |
+
+---
+
+# 23. VIP Customer System
+
+Premium customer benefit program.
+
+VIP customers may get:
+- Discounts
+- Skip penalties
+- Pay later facility
+- Special delivery options
+
+---
+
+# 24. Branch and Lodging
+
+## Branch
+
+Business office location.
+
+## Lodging
+
+Location where employees stay before assignment.
+
+Employees move:
+- Lodge → Customer
+- Customer → Lodge
+
+---
+
+# 25. Credit Control
+
+To stop customers with unpaid dues from taking new employees.
+
+Restriction happens when:
+- Contract expired
+- Due amount exceeds limit
+
+---
+
+# 26. Sadad Payment Integration
+
+External bill payment system.
+
+System automatically:
+- Creates Sadad bill
+- Sends bill to customer
+- Receives payment confirmation
+- Creates payment entry
+
+---
+
+# 27. Security Module
+
+Security controls:
+- User access
+- Roles
+- Permissions
+- Module visibility
+
+Example:
+- Finance user cannot access HR setup
+- Branch user cannot approve refunds
+
+---
+
+# 28. Real-Life Example Workflow
+
+## Example Scenario
+
+### Step 1
+
+Customer wants Indonesian maid for 90 days.
+
+### Step 2
+
+Customer selects package in mobile app.
+
+### Step 3
+
+System calculates amount.
+
+### Step 4
+
+Customer pays advance.
+
+### Step 5
+
+Contract created.
+
+### Step 6
+
+Employee selected from lodging.
+
+### Step 7
+
+Delivery process completed.
+
+### Step 8
+
+Contract becomes Valid.
+
+### Step 9
+
+After 60 days employee returns.
+
+### Step 10
+
+Customer requests replacement.
+
+### Step 11
+
+New employee delivered.
+
+### Step 12
+
+Contract expires.
+
+### Step 13
+
+Settlement completed.
+
+This is the complete operational lifecycle.
+
+---
+
+# 29. Important Business Understanding for Freshers
+
+## Key Point 1
+
+Everything revolves around:
+- Contract
+- Employee
+- Customer
+
+---
+
+## Key Point 2
+
+Employee movement is the core operational activity.
+
+---
+
+## Key Point 3
+
+Finance settlement is tightly connected with:
+- Contract status
+- Delivery
+- Extensions
+- Refunds
+
+---
+
+## Key Point 4
+
+Every workflow has:
+- Status
+- Approval
+- Finance impact
+
+---
+
+# 30. Final Summary
+
+This business is basically:
+
+"Supplying workers to customers through controlled contracts, tracked employee movement, and finance settlement workflows."
+
+The system manages:
+- Customer lifecycle
+- Labour lifecycle
+- Contract lifecycle
+- Payment lifecycle
+- Delivery lifecycle
+- Refund lifecycle
+
+All modules are connected together.
+
