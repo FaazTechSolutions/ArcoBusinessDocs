@@ -1,0 +1,402 @@
+---
+sidebar_position: 6
+---
+
+# Employee List Module
+## Business Understanding Document
+
+---
+
+# 1. Module Overview
+
+The Employee List module is used to manage all employees available in the HRM (Human Resource Management) system.
+
+This module acts as the central employee master database.
+
+All employee-related operations start from this screen.
+
+---
+
+# 2. Business Purpose
+
+The Employee List module helps the organization to:
+
+- Store employee master records
+- Search employees quickly
+- Track employee identification details
+- Access employee contracts
+- Manage employee lifecycle
+- Connect employees with HR, payroll, lodging, and contract operations
+
+---
+
+# 3. Screen Overview
+
+## Navigation Path
+
+HRM → Employee → Employee List
+
+---
+
+# 4. Main Functions Available
+
+| Function | Purpose |
+|---|---|
+| View Employees | Display all employee records |
+| Search Employee | Search employee using employee details |
+| Employee Selection | Select employee for actions |
+| Pagination | Navigate through large employee records |
+| Employee Details Access | Open employee profile information |
+| HR Operations | Perform employee-related transactions |
+
+---
+
+# 5. Employee List Columns
+
+The system displays employee information in tabular format.
+
+| Column | Description |
+|---|---|
+| Employee ID | Unique system-generated employee number |
+| Name | Employee full name |
+| Iqama Number | Saudi residency identification number |
+| Country Entrance No | Immigration or visa entry number |
+| Candidate ID | Recruitment candidate reference number |
+| KSA Arrival Date | Employee arrival date to Saudi Arabia |
+
+---
+
+# 6. Business Understanding of Each Field
+
+## Employee ID
+
+- Primary employee reference in system
+- Used in all modules
+- Unique for every employee
+
+Example:
+- 1001164
+- 1001169
+
+---
+
+## Name
+
+Employee full legal name.
+
+Used for:
+- HR records
+- Contracts
+- Payroll
+- Legal documents
+
+---
+
+## Iqama Number
+
+Saudi Arabia residency identification number.
+
+Important for:
+- Government compliance
+- Visa tracking
+- Contract validation
+- Employee renewal process
+
+---
+
+## Country Entrance Number
+
+Immigration entry reference number.
+
+Used for:
+- Travel tracking
+- Arrival verification
+- Visa processing
+
+---
+
+## Candidate ID
+
+Recruitment process reference number.
+
+Connected with:
+- Recruitment module
+- Candidate onboarding
+- Agency processing
+
+---
+
+## KSA Arrival Date
+
+Date employee entered Saudi Arabia.
+
+Important for:
+- Residency calculation
+- Probation tracking
+- Payroll eligibility
+- Contract activation
+
+---
+
+# 7. Business Flow
+
+## Employee Lifecycle Flow
+
+Recruitment → Candidate → Arrival → Employee Creation → Contract Assignment → Payroll → Renewal/Retirement
+
+---
+
+# 8. Employee Creation Process
+
+Employee records are usually created after:
+
+1. Candidate recruitment completed
+2. Visa approved
+3. Employee arrived in KSA
+4. HR onboarding completed
+
+Then:
+- Employee ID generated
+- Employee profile created
+- Employee becomes available for operations
+
+---
+
+# 9. Search Functionality
+
+The search box allows users to search employees using:
+
+- Employee ID
+- Name
+- Iqama Number
+- Candidate ID
+
+---
+
+# 10. Employee Selection
+
+Users can select employees using checkbox selection.
+
+Selected employees can be used for:
+
+- Contract assignment
+- Batch operations
+- Export
+- Transfer
+- HR actions
+
+---
+
+# 11. Action Menu
+
+The "Action" button is used to perform operations on employees.
+
+Possible actions may include:
+
+| Action | Purpose |
+|---|---|
+| Create Employee | Add new employee |
+| Edit Employee | Update employee details |
+| Employee Transfer | Move employee between branches |
+| Assign Contract | Connect employee to contract |
+| Export | Export employee records |
+| Delete/Deactivate | Disable employee profile |
+
+---
+
+# 12. Employee Related Modules
+
+This Employee List module is connected with multiple HR modules.
+
+---
+
+## Employee Contract
+
+Used to:
+- Create employee contracts
+- Manage labour agreements
+- Track active contracts
+
+---
+
+## Employee Profile Search
+
+Used for:
+- Advanced employee lookup
+- Viewing full employee details
+- Checking employment status
+
+---
+
+## Employee Inquiry
+
+Used for:
+- Employee information inquiry
+- HR verification
+- Employee tracking
+
+---
+
+## Mudad Contract Import
+
+Used for:
+- Importing labour contract data
+- Government integration
+
+---
+
+## Mudad Contract Status
+
+Used for:
+- Tracking Mudad contract processing
+- Compliance monitoring
+
+---
+
+## Hourly Assignment
+
+Used for:
+- Temporary employee assignments
+- Hourly labour allocation
+
+---
+
+## PayGroup Assignment
+
+Used for:
+- Payroll grouping
+- Salary batch processing
+
+---
+
+## Qiwa Request
+
+Connected with:
+- Saudi Qiwa platform
+- Labour compliance
+- Employee legal processing
+
+---
+
+# 13. Pagination Understanding
+
+The system supports large employee records.
+
+Current screen shows:
+- 10 records per page
+- Total records available
+- Page navigation controls
+
+Purpose:
+- Improve performance
+- Manage large employee databases
+
+---
+
+# 14. Business Importance
+
+This module is one of the most important HR modules because:
+
+- Every employee operation starts here
+- Employee data connects to all departments
+- HR, Payroll, Finance, Contract, and Lodging depend on this module
+
+---
+
+# 15. Real Business Example
+
+## Example Scenario
+
+### Step 1
+Recruitment team recruits employee.
+
+### Step 2
+Candidate arrives in Saudi Arabia.
+
+### Step 3
+HR creates employee profile.
+
+### Step 4
+Employee appears in Employee List.
+
+### Step 5
+Contract team assigns employee to customer contract.
+
+### Step 6
+Payroll team processes salary.
+
+### Step 7
+Renewal team manages Iqama renewal.
+
+This Employee List acts as the central employee database throughout the lifecycle.
+
+---
+
+# 16. Important Understanding for Freshers
+
+## Key Point 1
+
+Employee List is the master employee database.
+
+---
+
+## Key Point 2
+
+Every employee must have:
+- Employee ID
+- Iqama Number
+- Candidate ID
+
+---
+
+## Key Point 3
+
+Employee data connects with:
+- Contracts
+- Payroll
+- Travel
+- Finance
+- Compliance
+
+---
+
+## Key Point 4
+
+This screen is mainly used for:
+- Employee searching
+- Employee tracking
+- Employee management
+
+---
+
+# 17. Technical Understanding for QA/Testers
+
+Important validations:
+
+| Validation | Expected Behavior |
+|---|---|
+| Employee ID uniqueness | No duplicate IDs |
+| Search functionality | Accurate filtering |
+| Pagination | Correct record navigation |
+| Data loading | Proper employee display |
+| Action access | Based on user role |
+| Iqama validation | Proper format checking |
+
+---
+
+# 18. Summary
+
+The Employee List module is the central employee management screen of the HRM system.
+
+It helps users:
+- Manage employees
+- Search records
+- Track legal details
+- Connect employees with contracts and payroll
+
+Without this module:
+- HR operations cannot function properly
+- Labour contract assignment cannot happen
+- Payroll and compliance processes fail
+
+This module acts as the foundation of the complete employee lifecycle management system.
